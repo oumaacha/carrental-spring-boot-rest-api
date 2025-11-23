@@ -46,7 +46,7 @@ public class CarController {
 		this.carService.addCar(car);
 	}
 	
-	@DeleteMapping(path = "{carId}")
+	@DeleteMapping(path = "{carIdd}")
 	public void deleteCarById(@PathVariable Long carId) {
 		this.carService.deleteCarById(carId);
 	}
