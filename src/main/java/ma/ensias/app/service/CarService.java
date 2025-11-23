@@ -30,7 +30,8 @@ public class CarService {
 
 	public void addCar(Car car) {
 		Optional<Renter> renter = this.renterRepository.findById(car.getRenter().getRenterId());
-		if(!renter.isPresent()) throw new IllegalStateException("The renter with id "+car.getRenter().getRenterId()+" does not exists");
+		if(!renter.isPresent()) throw new IllegalStateException("The RENTER with id "+car.getRenter().getRenterId()+" does not exists");
+		car.setRenter(renter.get());
 		car.setRenter(renter.get());
 		this.carRepository.save(car);
 	}
