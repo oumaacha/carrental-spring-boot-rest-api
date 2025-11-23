@@ -53,7 +53,7 @@ public class CarService {
 		if(pricePerDay > 0) {
 			if(pricePerDay != car.get().getPricePerDay()) car.get().setPricePerDay(pricePerDay);
 			else throw new IllegalStateException("You entered current price");
-		}else throw new IllegalStateException("The price cannot be negative");
+		}else throw new IllegalStateException("The price can't	 be negative");
 		
 		if(this.isAvailable(color)) {
 			if(color != car.get().getCarColor()) car.get().setCarColor(color);
